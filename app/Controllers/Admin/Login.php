@@ -16,8 +16,7 @@
             $data = $model->where('email', $email)->first();
             if ($data) {
                 $pass = $data['password']; //data dari db
-                $verify_pass = password_verify($password, $pass);
-                if ($verify_pass) {
+                if ($password==$pass) {
                     $sess_data = [
                         'user_id'       => $data['id'],
                         'user_name'     => $data['name'],

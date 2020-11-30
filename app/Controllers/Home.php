@@ -4,7 +4,7 @@ class Home extends BaseController
 {
 	public function index()
 	{
-		return view('index');
+		return view('login_index');
 	}
 	public function dashboard($id,$nama)
 	{
